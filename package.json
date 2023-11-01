@@ -1,0 +1,24 @@
+{
+  "name": "population-report",
+  "version": "1.0.0",
+  "description": "Population Report App using - Typescript, SAPUI5 and Nodejs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Abhishek-s1289/population-report.git"
+  },
+  "keywords": [
+    "Typescript",
+    "SAPUI5",
+    "Nodejs"
+  ],
+  "author": "Abhishek Shukla",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Abhishek-s1289/population-report/issues"
+  },
+  "homepage": "https://github.com/Abhishek-s1289/population-report#readme"
+}
