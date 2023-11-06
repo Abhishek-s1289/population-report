@@ -6,7 +6,7 @@ import type { IExternalCityJSON, IInternalCityJSON } from "types/interfaces";
 
 export default class CityService {
 
-    private _cityJsonPath: string = path.join(__dirname, "../data/cities.json");
+    private _cityJsonPath: string = path.join(__dirname, "../../data/cities.json");
     private _cookedCities: IExternalCityJSON[];
 
     /**
