@@ -1,6 +1,8 @@
-import { Router, type Request, type Response, type NextFunction } from "express";
+import { Router, type NextFunction } from "express";
+import { odataUri } from "odata-v4-parser";
 import CityController from "./CityController";
-
+import type { IRequest, IResponse } from "types/interfaces";
+ 
 export default class ODataController {
 	public router: Router = Router();
 
@@ -10,16 +12,16 @@ export default class ODataController {
 	}
 
 	private _initializeMiddlewares() {
-		this.router.use((req: Request, res: Response, next: NextFunction)=>{
-			//TODO: Odatauri parsing
+		this.router.use((req: IRequest, res: IResponse, next: NextFunction) => {
+			if(req.method === 'GET'){
+				req.oDataQueryAst = odataUri(decodeURI(req.url)).value.query || null;
+			}
 			next();
 		});
 	}
 
-	// Add all the entity controllers here.
 	private _initializeRoutes() {
 		const cityController = new CityController();
-        this.router.use(cityController.router);
-    }
+		this.router.use(cityController.router);
+	}
 }
-

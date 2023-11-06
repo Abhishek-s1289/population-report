@@ -2,6 +2,7 @@ import http from "http";
 import express, { type Application } from "express";
 import dotenv from "dotenv";
 import ODataController from "./controller/ODataController";
+import path from "path";
 
 dotenv.config();
 
@@ -24,6 +25,7 @@ class Server {
 	}
 
 	private _configureGlobalMiddlewares(): void {
+		this._app.use(express.static(path.join(__dirname, "../../", "frontend/dist")));
 		this._app.use(express.json());
 		this._app.use(express.urlencoded({ extended: true }));
 	}
