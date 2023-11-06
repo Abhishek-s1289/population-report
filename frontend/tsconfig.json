@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "target": "ES2015",
+        "module": "ESNext",
+        "moduleResolution": "node",
+        "skipLibCheck": true,
+        "allowJs": true,
+        "strict": false,
+        "strictPropertyInitialization": false,
+        "rootDir": "./webapp",
+        "baseUrl": "./",
+        "paths": {
+            "PopulationReport/*": ["./webapp/*"]
+        },
+        "composite": true
+    },
+    "include": ["./webapp/**/*"]
+}

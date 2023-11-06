@@ -1,0 +1,71 @@
+<mvc:View
+	controllerName="PopulationReport.controller.Report"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns="sap.m"
+	height="100%">
+	<App id="app">
+		<pages>
+			<Page showHeader="false">
+				<Table id="idCitiesTable"
+					enableBusyIndicator="true"
+					growing="true"
+					busy="{/loading}"
+					growingScrollToLoad="true"
+					sticky="ColumnHeaders,HeaderToolbar"
+					autoPopinMode="true"
+					items="{/CityListSet}">
+					<headerToolbar>
+						<OverflowToolbar>
+							<Title text="Cities" level="H2"/>
+							<ToolbarSpacer/>
+							<SearchField 
+								id="searchCity" 
+								width="12rem" 
+								placeholder="Search cities"
+								class="searchField"/>
+							<Button
+								tooltip="Sort"
+								icon="sap-icon://sort"
+								press="openSortDialog"
+
+								/>
+							<Button
+								text="Add"
+								press="onOpenCreateDialog"
+								ariaHasPopup="Dialog" />
+						</OverflowToolbar>
+					</headerToolbar>
+					<columns>
+						<Column width="10em" importance="High">
+							<Text text="Name" />
+						</Column>
+						<Column width="6em" hAlign="Center" importance="Low">
+							<Text text="Density" />
+						</Column>
+						<Column width="6em" hAlign="Center" importance="Medium">
+							<Text text="Area" />
+						</Column>
+						<Column width="6em" hAlign="End" importance="High">
+							<Text text="Population" />
+						</Column>
+					</columns>
+					<items>
+						<ColumnListItem vAlign="Middle">
+							<customData>
+								<core:CustomData key="population" value="{= ${population} > 1000000 ? 'over' : 'under'}" writeToDom="true"/>
+							</customData>
+							<cells>
+								<ObjectIdentifier title="{name}" />
+								<Text text="{density}" />
+								<Text text="{area}" />
+								<Text text="{population}" />
+							</cells>
+						</ColumnListItem>
+					</items>
+				</Table>
+			</Page>
+		</pages>
+	</App>
+
+</mvc:View>

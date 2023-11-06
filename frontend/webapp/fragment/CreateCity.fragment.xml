@@ -1,0 +1,47 @@
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:f="sap.ui.layout.form"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core">
+	<Dialog
+        id="createCityDialog"
+		title="Add City">
+		<content>
+			<VBox class="sapUiSmallMargin">
+				<f:SimpleForm
+					editable="true"
+					layout="ColumnLayout"
+					title="Detail"
+					columnsM="2"
+					columnsL="2"
+					columnsXL="2">
+					<f:content>
+						<Label text="City" />
+                        <Input id="cityInput" required="true" type="Text"/>
+
+						<Label text="Area" />
+                        <Input id="areaInput" required="true" type="Number" />
+                        
+						<Label text="Population" />
+						<Input id="populationInput" required="true" type="Number" />
+					</f:content>
+				</f:SimpleForm>
+			</VBox>
+		</content>
+		<footer>
+			<Toolbar>
+				<content>
+					<ToolbarSpacer />
+					<Button type="Accept"
+							text="Save"
+							press="closeCreateDialog('save')" />
+					<Button
+						text="Close"
+						type="Reject"
+						press="closeCreateDialog('cancel')"
+						ariaHasPopup="Dialog" />
+				</content>
+			</Toolbar>
+		</footer>
+	</Dialog>
+</core:FragmentDefinition>

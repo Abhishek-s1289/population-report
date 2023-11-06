@@ -1,0 +1,14 @@
+# Ignore files and directories in the root
+node_modules
+.env
+
+# Ignore files and directories in the 'backend' folder
+backend/node_modules
+backend/dist
+backend/package-lock.json
+backend/.env
+
+# Ignore files and directories in the 'frontend' folder
+frontend/node_modules
+frontend/dist
+frontend/package-lock.json

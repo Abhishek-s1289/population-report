@@ -1,0 +1,46 @@
+{
+	"_version": "1.1.0",
+	"sap.app": {
+		"id": "PopulationReport",
+		"type": "application",
+		"title": "Population Report",
+		"description": "Population Report",
+		"applicationVersion": {
+			"version": "1.0.0"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"icons": {},
+		"deviceTypes": {
+			"desktop": true,
+			"tablet": true,
+			"phone": true
+		}
+	},
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "PopulationReport.view.Report",
+			"type": "XML",
+			"async": true
+		},
+		"dependencies": {
+			"minUI5Version": "1.119.1",
+			"libs": {
+				"sap.m": {}
+			}
+		},
+		"handleValidation": true,
+		"contentDensities": {
+			"compact": true,
+			"cozy": true
+		},
+		"resources": {
+			"css": [{
+				"uri": "css/style.css"
+			}]
+		},
+		"models": {},
+		"routing": {}
+	}
+}

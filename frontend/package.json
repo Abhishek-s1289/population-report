@@ -1,0 +1,16 @@
+{
+  "name": "population-report",
+  "version": "1.0.0",
+  "description": "Population Report - Frontend",
+  "author": "Abhishek Shukla",
+  "license": "ISC",
+  "scripts": {
+    "build": "ui5 build --clean-dest"
+  },
+  "devDependencies": {
+    "@types/openui5": "^1.119.1",
+    "@ui5/cli": "^3.7.1",
+    "typescript": "^5.2.2",
+    "ui5-tooling-transpile": "^3.2.7"
+  }
+}
