@@ -4,7 +4,12 @@
   "description": "Population Report App using - Typescript, SAPUI5 and Nodejs",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "install-deps": "concurrently \"npm run server-dependencies\" && npm run \"client-dependencies\"",
+    "server-dependencies": "cd backend && npm install",
+    "client-dependencies": "cd frontend && npm install",
+    "startDevServer": "\"cd backend && npm run dev-server\"",
+    "startProdServer": "\"cd backend && npm run prod-server\"",
+    "build": "concurrently \"cd backend && npm run build\" \"cd frontend && npm run build\""
   },
   "repository": {
     "type": "git",
@@ -20,5 +25,8 @@
   "bugs": {
     "url": "https://github.com/Abhishek-s1289/population-report/issues"
   },
-  "homepage": "https://github.com/Abhishek-s1289/population-report#readme"
+  "homepage": "https://github.com/Abhishek-s1289/population-report#readme",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
 }

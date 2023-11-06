@@ -1,5 +1,6 @@
 # Ignore files and directories in the root
 node_modules
+package-lock.json
 .env
 
 # Ignore files and directories in the 'backend' folder
