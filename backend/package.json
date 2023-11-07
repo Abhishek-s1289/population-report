@@ -3,8 +3,8 @@
 	"version": "1.0.0",
 	"description": "Population Report - Backend",
 	"scripts": {
-		"dev-server": "nodemon src/Server.ts",
-		"prod-server": "node dist/Server.js",
+		"dev": "nodemon src/Server.ts",
+		"start": "node dist/Server.js",
 		"clean": "rimraf dist/",
 		"build": "npm run clean && tsc"
 	},
